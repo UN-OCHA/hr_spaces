@@ -26,6 +26,13 @@ function hr_spaces_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:hr_space:administer panelizer og_group content'
+  $permissions['node:hr_space:administer panelizer og_group content'] = array(
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+  );
+
   // Exported og permission: 'node:hr_space:approve and deny subscription'
   $permissions['node:hr_space:approve and deny subscription'] = array(
     'roles' => array(
@@ -34,11 +41,28 @@ function hr_spaces_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:hr_space:assign editor role'
+  $permissions['node:hr_space:assign editor role'] = array(
+    'roles' => array(),
+  );
+
+  // Exported og permission: 'node:hr_space:assign manager role'
+  $permissions['node:hr_space:assign manager role'] = array(
+    'roles' => array(),
+  );
+
   // Exported og permission: 'node:hr_space:manage members'
   $permissions['node:hr_space:manage members'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'manager' => 'manager',
+    ),
+  );
+
+  // Exported og permission: 'node:hr_space:update group'
+  $permissions['node:hr_space:update group'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
     ),
   );
 
