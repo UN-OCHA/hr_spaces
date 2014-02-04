@@ -10,16 +10,6 @@
 function hr_spaces_og_features_default_permissions() {
   $permissions = array();
 
-  // Exported og permission: 'node:hr_bundle:assign editor role'
-  $permissions['node:hr_bundle:assign editor role'] = array(
-    'roles' => array(),
-  );
-
-  // Exported og permission: 'node:hr_bundle:assign manager role'
-  $permissions['node:hr_bundle:assign manager role'] = array(
-    'roles' => array(),
-  );
-
   // Exported og permission: 'node:hr_space:add user'
   $permissions['node:hr_space:add user'] = array(
     'roles' => array(
