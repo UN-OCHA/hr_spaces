@@ -43,12 +43,23 @@ function hr_spaces_og_features_default_permissions() {
 
   // Exported og permission: 'node:hr_space:assign editor role'
   $permissions['node:hr_space:assign editor role'] = array(
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
   );
 
   // Exported og permission: 'node:hr_space:assign manager role'
   $permissions['node:hr_space:assign manager role'] = array(
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+  );
+
+  // Exported og permission: 'node:hr_space:edit group features'
+  $permissions['node:hr_space:edit group features'] = array(
+    'roles' => array(
+      'manager' => 'manager',
+    ),
   );
 
   // Exported og permission: 'node:hr_space:manage members'
