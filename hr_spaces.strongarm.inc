@@ -42,7 +42,11 @@ function hr_spaces_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__hr_space';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'search_result' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'og_menu' => array(
@@ -111,6 +115,20 @@ function hr_spaces_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'og_features_settings_node_hr_space';
+  $strongarm->value = array(
+    'hr_contacts' => '0',
+    'hr_documents' => '2',
+    'hr_emergencies' => '0',
+    'hr_fundings' => '0',
+    'hr_offices' => '0',
+    'hr_pages' => '2',
+  );
+  $export['og_features_settings_node_hr_space'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_defaults_node_hr_space';
   $strongarm->value = array(
     'status' => 1,
@@ -125,27 +143,12 @@ function hr_spaces_strongarm() {
         'default' => 1,
         'choice' => 0,
       ),
-      'full' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
       'teaser' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
       ),
-      'rss' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'diff_standard' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'token' => array(
+      'search_result' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
@@ -165,14 +168,14 @@ function hr_spaces_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:hr_space_allowed_layouts_default';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['panelizer_node:hr_space_allowed_layouts_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:hr_space_allowed_types_default';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['panelizer_node:hr_space_allowed_types_default'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -180,15 +183,19 @@ function hr_spaces_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:hr_space_default';
   $strongarm->value = array(
-    'block' => 'block',
-    'entity_form_field' => 'entity_form_field',
-    'custom' => 'custom',
-    'entity_field_extra' => 'entity_field_extra',
-    'entity_field' => 'entity_field',
-    'token' => 'token',
-    'entity_view' => 'entity_view',
-    'menu_tree' => 'menu_tree',
-    'other' => 'other',
+    'views_panes' => 'views_panes',
+    'block' => 0,
+    'entity_form_field' => 0,
+    'custom' => 0,
+    'entity_field_extra' => 0,
+    'entity_field' => 0,
+    'token' => 0,
+    'entity_view' => 0,
+    'fieldable_panels_pane' => 0,
+    'menu_tree' => 0,
+    'panels_mini' => 0,
+    'views' => 0,
+    'other' => 0,
   );
   $export['panelizer_node:hr_space_default'] = $strongarm;
 
