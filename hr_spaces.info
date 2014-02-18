@@ -67,6 +67,7 @@ features[variable][] = og_features_settings_node_hr_space
 features[variable][] = panelizer_defaults_node_hr_space
 features[variable][] = panelizer_node:hr_space_allowed_layouts
 features[variable][] = panelizer_node:hr_space_allowed_layouts_default
+features[variable][] = panelizer_node:hr_space_allowed_types
 features[variable][] = panelizer_node:hr_space_allowed_types_default
 features[variable][] = panelizer_node:hr_space_default
 features[views_view][] = initiatives
