@@ -74,6 +74,7 @@ function hr_spaces_og_features_default_permissions() {
   $permissions['node:hr_space:update group'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
+      'manager' => 'manager',
     ),
   );
 
