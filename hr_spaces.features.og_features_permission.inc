@@ -70,6 +70,16 @@ function hr_spaces_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:hr_space:subscribe'
+  $permissions['node:hr_space:subscribe'] = array(
+    'roles' => array(),
+  );
+
+  // Exported og permission: 'node:hr_space:subscribe without approval'
+  $permissions['node:hr_space:subscribe without approval'] = array(
+    'roles' => array(),
+  );
+
   // Exported og permission: 'node:hr_space:update group'
   $permissions['node:hr_space:update group'] = array(
     'roles' => array(
