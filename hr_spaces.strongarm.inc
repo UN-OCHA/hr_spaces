@@ -46,6 +46,21 @@ function hr_spaces_strongarm() {
       'search_result' => array(
         'custom_settings' => TRUE,
       ),
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -57,6 +72,9 @@ function hr_spaces_strongarm() {
         ),
         'language' => array(
           'weight' => '6',
+        ),
+        'redirect' => array(
+          'weight' => '12',
         ),
       ),
       'display' => array(),

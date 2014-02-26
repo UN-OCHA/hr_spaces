@@ -61,6 +61,52 @@ function hr_spaces_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-hr_space-field_email'
+  $field_instances['node-hr_space-field_email'] = array(
+    'bundle' => 'hr_space',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 7,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-hr_space-field_image'
   $field_instances['node-hr_space-field_image'] = array(
     'bundle' => 'hr_space',
@@ -128,6 +174,71 @@ function hr_spaces_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-hr_space-field_social_media'
+  $field_instances['node-hr_space-field_social_media'] = array(
+    'bundle' => 'hr_space',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link_icons',
+        'settings' => array(),
+        'type' => 'link_icons',
+        'weight' => 8,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_social_media',
+    'label' => 'Social media',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 11,
     ),
   );
 
@@ -287,7 +398,7 @@ function hr_spaces_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -447,9 +558,11 @@ function hr_spaces_field_default_field_instances() {
   t('Body');
   t('Category');
   t('Determine if this is an OG group.');
+  t('Email');
   t('Group');
   t('Icon');
   t('Name');
+  t('Social media');
   t('Title');
   t('Type');
   t('Website');
