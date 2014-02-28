@@ -159,16 +159,11 @@ function hr_spaces_feeds_importer_default() {
             'unique' => FALSE,
           ),
           10 => array(
-            'source' => 'Social media',
-            'target' => 'field_social_media:url',
-            'unique' => FALSE,
-          ),
-          11 => array(
             'source' => 'Mailchimp API key',
             'target' => 'field_mailchimp_api_key',
             'unique' => FALSE,
           ),
-          12 => array(
+          11 => array(
             'source' => 'Mailchimp List',
             'target' => 'field_mailchimp_list',
             'unique' => FALSE,
