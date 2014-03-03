@@ -564,6 +564,68 @@ function hr_spaces_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-hr_space-og_roles_permissions'
+  $field_instances['node-hr_space-og_roles_permissions'] = array(
+    'bundle' => 'hr_space',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'og_roles_permissions',
+    'label' => 'Group roles and permissions',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'view modes' => array(
+      'full' => array(
+        'custom settings' => FALSE,
+        'label' => 'Full',
+        'type' => 'list_default',
+      ),
+      'teaser' => array(
+        'custom settings' => FALSE,
+        'label' => 'Teaser',
+        'type' => 'list_default',
+      ),
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-hr_space-title_field'
   $field_instances['node-hr_space-title_field'] = array(
     'bundle' => 'hr_space',
@@ -657,6 +719,7 @@ function hr_spaces_field_default_field_instances() {
   t('Determine if this is an OG group.');
   t('Email');
   t('Group');
+  t('Group roles and permissions');
   t('Icon');
   t('Mailchimp API key');
   t('Mailchimp List');

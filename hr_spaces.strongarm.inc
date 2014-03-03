@@ -71,7 +71,7 @@ function hr_spaces_strongarm() {
           'weight' => '7',
         ),
         'language' => array(
-          'weight' => '6',
+          'weight' => '15',
         ),
         'redirect' => array(
           'weight' => '14',
