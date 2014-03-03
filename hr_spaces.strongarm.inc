@@ -136,11 +136,12 @@ function hr_spaces_strongarm() {
   $strongarm->name = 'og_features_settings_node_hr_space';
   $strongarm->value = array(
     'hr_contacts' => '0',
-    'hr_documents' => '2',
     'hr_disasters' => '0',
+    'hr_documents' => '2',
     'hr_fundings' => '0',
     'hr_offices' => '0',
     'hr_pages' => '2',
+    'hr_users' => '2',
   );
   $export['og_features_settings_node_hr_space'] = $strongarm;
 
