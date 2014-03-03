@@ -79,6 +79,6 @@ features[variable][] = panelizer_node:hr_space_allowed_layouts_default
 features[variable][] = panelizer_node:hr_space_allowed_types
 features[variable][] = panelizer_node:hr_space_allowed_types_default
 features[variable][] = panelizer_node:hr_space_default
-features[views_view][] = initiatives
+features[views_view][] = hr_spaces
 features_exclude[field_base][group_group] = group_group
 features_exclude[dependencies][hr_spaces] = hr_spaces

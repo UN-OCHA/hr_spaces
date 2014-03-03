@@ -11,11 +11,11 @@ function hr_spaces_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'initiatives';
+  $view->name = 'hr_spaces';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Initiatives';
+  $view->human_name = 'Spaces';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -87,11 +87,10 @@ function hr_spaces_views_default_views() {
   $handler->display->display_options['fields']['field_space_category']['settings'] = array(
     'link' => 0,
   );
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -114,8 +113,8 @@ function hr_spaces_views_default_views() {
     'initiative' => 'initiative',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Initiatives */
+  $handler = $view->new_display('page', 'Initiatives', 'initiatives');
   $handler->display->display_options['path'] = 'initiatives';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Initiatives';
@@ -123,7 +122,40 @@ function hr_spaces_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
-  $translatables['initiatives'] = array(
+
+  /* Display: Applications */
+  $handler = $view->new_display('page', 'Applications', 'applications');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'hr_space' => 'hr_space',
+  );
+  /* Filter criterion: Content: Type (field_space_type) */
+  $handler->display->display_options['filters']['field_space_type_value']['id'] = 'field_space_type_value';
+  $handler->display->display_options['filters']['field_space_type_value']['table'] = 'field_data_field_space_type';
+  $handler->display->display_options['filters']['field_space_type_value']['field'] = 'field_space_type_value';
+  $handler->display->display_options['filters']['field_space_type_value']['value'] = array(
+    'application' => 'application',
+  );
+  $handler->display->display_options['path'] = 'applications';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Applications';
+  $handler->display->display_options['menu']['weight'] = '8';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $translatables['hr_spaces'] = array(
     t('Master'),
     t('more'),
     t('Apply'),
@@ -132,9 +164,10 @@ function hr_spaces_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('[path]'),
-    t('Page'),
+    t('Initiatives'),
+    t('Applications'),
   );
-  $export['initiatives'] = $view;
+  $export['hr_spaces'] = $view;
 
   return $export;
 }
