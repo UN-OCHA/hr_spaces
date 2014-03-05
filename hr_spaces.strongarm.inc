@@ -139,6 +139,7 @@ function hr_spaces_strongarm() {
     'hr_disasters' => '0',
     'hr_documents' => '2',
     'hr_fundings' => '0',
+    'hr_news' => '2',
     'hr_offices' => '0',
     'hr_pages' => '2',
     'hr_users' => '2',
