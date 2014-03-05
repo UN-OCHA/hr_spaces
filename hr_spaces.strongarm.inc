@@ -68,10 +68,10 @@ function hr_spaces_strongarm() {
           'weight' => '4',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '15',
         ),
         'language' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
         'redirect' => array(
           'weight' => '14',
