@@ -15,6 +15,7 @@ dependencies[] = link_icons
 dependencies[] = list
 dependencies[] = media
 dependencies[] = og
+dependencies[] = og_access
 dependencies[] = og_features
 dependencies[] = og_menu
 dependencies[] = og_role_delegate
