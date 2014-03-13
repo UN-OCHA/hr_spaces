@@ -71,12 +71,14 @@ function hr_spaces_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'initiative' => 'Initiative',
+        'clusters' => 'Clusters',
+        'programme_cycle' => 'Programme Cycle',
+        'topic' => 'Topic',
         'application' => 'Application',
-        'other' => 'Other',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'list_text',
