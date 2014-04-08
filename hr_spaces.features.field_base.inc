@@ -75,6 +75,7 @@ function hr_spaces_field_default_field_bases() {
         'programme_cycle' => 'Programme Cycle',
         'topic' => 'Topic',
         'application' => 'Application',
+        'other' => 'Other',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
