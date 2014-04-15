@@ -226,7 +226,7 @@ function hr_spaces_strongarm() {
     'node_title-node_title' => 0,
     'node_content-node_content' => 0,
     'node_author-node_author' => 0,
-    'node_body-node_body' => 0,
+    'node_body-node_body' => 1,
     'node_created-node_created' => 0,
     'node_terms-node_terms' => 0,
     'node_type_desc-node_type_desc' => 0,
