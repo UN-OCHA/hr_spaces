@@ -145,6 +145,7 @@ function hr_spaces_strongarm() {
     'hr_offices' => '0',
     'hr_pages' => '2',
     'hr_users' => '2',
+    'hr_webforms' => '3',
   );
   $export['og_features_settings_node_hr_space'] = $strongarm;
 
