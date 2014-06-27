@@ -26,5 +26,13 @@ function hr_spaces_og_features_default_roles() {
     'name' => 'manager',
   );
 
+  // Exported OG Role: 'node:hr_space:contributor'.
+  $roles['node:hr_space:contributor'] = array(
+    'gid' => 0,
+    'group_type' => 'node',
+    'group_bundle' => 'hr_space',
+    'name' => 'contributor',
+  );
+
   return $roles;
 }
