@@ -72,6 +72,7 @@ function hr_spaces_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'clusters' => 'Clusters',
+        'coordination' => 'Coordination',
         'programme_cycle' => 'Programme Cycle',
         'topic' => 'Topic',
         'application' => 'Application',
