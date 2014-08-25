@@ -181,6 +181,32 @@ function hr_spaces_views_default_views() {
   $handler->display->display_options['filters']['field_space_type_value']['value'] = array(
     'programme_cycle' => 'programme_cycle',
   );
+
+  /* Display: Coordination */
+  $handler = $view->new_display('panel_pane', 'Coordination', 'panel_pane_2');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'hr_space' => 'hr_space',
+  );
+  /* Filter criterion: Content: Type (field_space_type) */
+  $handler->display->display_options['filters']['field_space_type_value']['id'] = 'field_space_type_value';
+  $handler->display->display_options['filters']['field_space_type_value']['table'] = 'field_data_field_space_type';
+  $handler->display->display_options['filters']['field_space_type_value']['field'] = 'field_space_type_value';
+  $handler->display->display_options['filters']['field_space_type_value']['value'] = array(
+    'coordination' => 'coordination',
+  );
   $translatables['hr_spaces'] = array(
     t('Master'),
     t('more'),
@@ -194,6 +220,7 @@ function hr_spaces_views_default_views() {
     t('Applications'),
     t('Programme Cycle'),
     t('View panes'),
+    t('Coordination'),
   );
   $export['hr_spaces'] = $view;
 
