@@ -68,13 +68,13 @@ function hr_spaces_strongarm() {
           'weight' => '4',
         ),
         'path' => array(
-          'weight' => '15',
+          'weight' => '17',
         ),
         'language' => array(
-          'weight' => '16',
+          'weight' => '18',
         ),
         'redirect' => array(
-          'weight' => '14',
+          'weight' => '16',
         ),
       ),
       'display' => array(),
