@@ -135,6 +135,7 @@ function hr_spaces_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'og_features_settings_node_hr_space';
   $strongarm->value = array(
+    'acc_incidents' => '0',
     'hr_assessments' => '0',
     'hr_contacts' => '0',
     'hr_datasets' => '3',
