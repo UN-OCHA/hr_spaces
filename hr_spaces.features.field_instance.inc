@@ -728,7 +728,7 @@ function hr_spaces_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(
         'display_label' => 0,
-        'og_hide' => TRUE,
+        'og_hide' => FALSE,
       ),
       'type' => 'options_onoff',
       'weight' => 5,
