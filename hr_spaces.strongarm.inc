@@ -3028,7 +3028,7 @@ function hr_spaces_strongarm() {
     'views_panes-hr_documents_panes-documents_from_context' => 0,
     'views_panes-hr_documents_panes-mm_from_context' => 0,
     'views_panes-hr_events_panes-upcoming_from_context' => 0,
-    'views_panes-hr_infographics_panes-list' => 0,
+    'views_panes-hr_infographics_panes-list' => 'views_panes-hr_infographics_panes-list',
     'views_panes-hr_infographics_panes-thumbnail' => 0,
     'views_panes-hr_infographics_panes-infographics_from_context' => 0,
     'views_panes-hr_bundles-text' => 0,
