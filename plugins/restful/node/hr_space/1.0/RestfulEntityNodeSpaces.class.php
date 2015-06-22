@@ -53,6 +53,14 @@ class RestfulEntityNodeSpaces extends \RestfulEntityBaseNode {
       'process_callbacks' => array(array($this, 'getEntity')),
     );
 
+    $public_fields['created'] = array(
+      'property' => 'created',
+    );
+
+    $public_fields['changed'] = array(
+      'property' => 'changed',
+    );
+
     $public_fields['url'] = array(
       'property' => 'url',
     );
